@@ -357,7 +357,7 @@ table.sum { width: 100%; border-collapse: collapse; font-size: 13px; font-varian
       <button type="button" id="modeT" aria-pressed="false">Tanaman</button>
       <button type="button" id="modeC" aria-pressed="true">Coppice</button>
     </div>
-    <button type="button" class="ghost" id="installBtn">Pasang</button><button type="button" class="ghost" id="btnSettings">Ringkasan &amp; atur</button>
+    <button type="button" class="ghost" id="btnSettings">Ringkasan &amp; atur</button>
   </div>
 </div>
 
@@ -1199,33 +1199,6 @@ table.sum { width: 100%; border-collapse: collapse; font-size: 13px; font-varian
 
 <script>
 (function () {
-  var installPrompt = null;
-  var button = document.getElementById('installBtn');
-  if (!button) return;
-  function isInstalled() {
-    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-  }
-  if (isInstalled()) button.hidden = true;
-  window.addEventListener('beforeinstallprompt', function (event) {
-    event.preventDefault();
-    installPrompt = event;
-    button.hidden = false;
-    button.textContent = 'Pasang';
-  });
-  window.addEventListener('appinstalled', function () {
-    installPrompt = null;
-    button.hidden = true;
-  });
-  button.addEventListener('click', async function () {
-    if (installPrompt) {
-      installPrompt.prompt();
-      await installPrompt.userChoice;
-      installPrompt = null;
-      return;
-    }
-    if (window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches) return;
-    window.alert('Android: buka menu Chrome (⋮), lalu pilih Pasang aplikasi atau Tambahkan ke layar utama. iPhone: buka halaman ini di Safari, ketuk Bagikan, lalu Tambahkan ke Layar Utama.');
-  });
   if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     window.addEventListener('load', function () {
       navigator.serviceWorker.register('./service-worker.js').catch(function (error) {
