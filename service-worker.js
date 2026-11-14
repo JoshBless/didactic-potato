@@ -1,7 +1,7 @@
 'use strict';
-const CACHE_NAME = 'monev-eucalyptus-pwa-v6';
+const CACHE_NAME = 'monev-eucalyptus-pwa-v7';
 const APP_FILES = [
-  './', './index.html', './manifest.webmanifest', './icons/logo-tree.svg'
+  './', './index.html', './manifest.webmanifest', './logo-tree.svg'
 ];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_FILES)).then(() => self.skipWaiting()));
