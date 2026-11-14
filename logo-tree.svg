@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Konsep logo Monev Counter: hitungan pohon minimal</title>
+  <desc id="desc">Empat pohon hijau tegak dan satu pohon oranye panjang menyilang di tengah membentuk hitungan lima.</desc>
+  <defs>
+    <g id="tree">
+      <path d="M0 2c-2 4-8 10-8 14 0 3 2 5 5 5h1v13h4V21h1c3 0 5-2 5-5C8 12 2 6 0 2Z"/>
+    </g>
+  </defs>
+  <g fill="#4CC477">
+    <use href="#tree" x="24" y="22"/>
+    <use href="#tree" x="42" y="22"/>
+    <use href="#tree" x="60" y="22"/>
+    <use href="#tree" x="78" y="22"/>
+  </g>
+  <g transform="translate(92 20) rotate(64)" fill="#E8590C">
+    <path d="M0 2c-2 4-8 10-8 14 0 3 2 5 5 5h6c3 0 5-2 5-5C8 12 2 6 0 2Z"/>
+    <path d="M-2 17h4v61h-4z"/>
+  </g>
+</svg>

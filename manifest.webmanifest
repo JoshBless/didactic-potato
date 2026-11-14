@@ -1,0 +1,16 @@
+{
+  "id": "./index.html",
+  "name": "Monev Eucalyptus",
+  "short_name": "Monev",
+  "description": "Aplikasi pencatatan monitoring dan evaluasi tanaman eucalyptus dan coppice.",
+  "lang": "id-ID",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#E7ECE3",
+  "theme_color": "#15211B",
+  "icons": [
+    { "src": "./icons/logo-tree.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
